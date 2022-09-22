@@ -14,6 +14,16 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   ImagePicker picker = ImagePicker();
   var userImage;
+  var data = [];
+  addMyData() {
+    var myData = {
+      'id': data.length,
+    };
+    setState(() {
+      data.insert(0, myData);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +39,11 @@ class _MainScreenState extends State<MainScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => UploadScreen(userImage: userImage),
+                  builder: (context) => UploadScreen(
+                    userImage: userImage,
+                    addMyData: addMyData
+
+                  ),
                 ),
               );
             },
