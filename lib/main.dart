@@ -1,4 +1,5 @@
-import 'package:auto_photo_slide/presentation/main_screen/main_screen.dart';
+
+import 'package:auto_photo_slide/ui/main_screen/main_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
